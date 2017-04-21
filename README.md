@@ -5,7 +5,7 @@
 - App wallet can be used any time, any place as long as you have a smart phone.
 - This App supports Chinese language.
 - Keep secret key local can make it safer.
-- This App is in development from stellar desktop wallet. App will be available for download soon.
+- This App is in development from stellar desktop wallet. App will be available for download soon. It was tested on Lenovo A391e70, an andriod phone.
 
 ## Reference
 
