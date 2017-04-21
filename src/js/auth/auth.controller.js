@@ -2,8 +2,10 @@ myApp.controller('LoginCtrl', ['$scope', '$rootScope', '$window', '$location', '
   function($scope, $rootScope, $window, $location, FileDialog, UserAuthFactory, AuthenticationFactory) {
 	$scope.fileInputClick = function() {
 		FileDialog.openFile(function(filename) {
+			    console.log("filename = " + filename.name);
 	        $scope.$apply(function() {
 	          $scope.walletfile = filename;
+	          
 	        });
 	    }, false);
 	};
@@ -29,7 +31,7 @@ myApp.controller('LoginCtrl', ['$scope', '$rootScope', '$window', '$location', '
 		        AuthenticationFactory.userBlob = JSON.stringify(blob.data);
 		        $window.sessionStorage.userBlob = AuthenticationFactory.userBlob;
 		        $rootScope.$broadcast('$blobUpdate');
-				$location.path('/');
+				$location.path('/balance');
 	        });
 		});
 	}
@@ -127,7 +129,7 @@ myApp.controller('RegisterCtrl', ['$scope', '$rootScope', '$window', '$location'
 		$scope.mode = 'register_empty_wallet';
 	    $scope.reset();
 
-	    $location.path('/');
+	    $location.path('/balance');
 	};
 	
    }

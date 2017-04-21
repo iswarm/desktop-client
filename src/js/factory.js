@@ -35,7 +35,7 @@ myApp.factory('SettingFactory', function($window) {
 					base_code   : 'XLM',
 					base_issuer : '',
 					counter_code   : 'CNY',
-					counter_issuer : 'GAREELUB43IRHWEASCFBLKHURCGMHE5IF6XSE7EXDLACYHGRHM43RFOX'
+					counter_issuer : 'GBXXGZGNA6DQ5U4LKF6FP3QNXIZ4X3OTSRXYRV36N5UPKB5JG6Y3ROCK'
 				}
 			}
 		},

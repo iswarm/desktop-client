@@ -76,11 +76,19 @@ myApp.factory('TokenInterceptor', function($q, $window) {
 myApp.factory('FileDialog', ['$rootScope', function($scope) {
 	var callDialog = function(dialog, callback) {
 		dialog.addEventListener('change', function() {
-			var result = dialog.value;
+			var result = dialog.files[0];
 			callback(result);
 		}, false);
 		dialog.click();
 	};
+	
+	var callDialogSave = function(dialog, callback) {
+		dialog.addEventListener('change', function() {
+			var result = dialog.value;
+			callback(result);
+		}, false);
+		dialog.click();
+	}; 
 
 	var dialogs = {};
 
@@ -93,7 +101,7 @@ myApp.factory('FileDialog', ['$rootScope', function($scope) {
 		} else if (angular.isString(acceptTypes)) {
 			dialog.accept = acceptTypes;
 		}
-		callDialog(dialog, callback);
+		callDialogSave(dialog, callback);
 	};
 
 	dialogs.openFile = function(callback, multiple, acceptTypes) {

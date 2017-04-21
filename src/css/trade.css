@@ -61,20 +61,20 @@ a.AssetPairRow:hover .AssetPair__separator {
 }
 
 .OfferMaker__table__row {
-	height: 50px;
+	height: 10px;
 }
 
 .OfferMaker__table__label {
-	min-width: 100px;
+	min-width: 40px;
 }
 
 .OfferMaker__table__input {
 	width: auto;
-	min-width: 100px;
+	min-width: 20px;
 }
 
 .OfferMaker__table__input__input {
-	width: 100%;
+	width: 70%;
 }
 
 .OfferMaker__overview {
@@ -158,16 +158,16 @@ a.AssetPairRow:hover .AssetPair__separator {
 }
 
 .OfferMaker__table__row {
-	height: 50px;
+	height: 10px;
 }
 
 .OfferMaker__table__label {
-	min-width: 100px;
+	min-width: 40px;
 }
 
 .OfferMaker__table__input {
 	width: auto;
-	min-width: 100px;
+	min-width: 20px;
 }
 
 .OfferMaker__message {
@@ -184,7 +184,7 @@ a.AssetPairRow:hover .AssetPair__separator {
 }
 
 .OfferMaker__table__input__input {
-	width: 100%;
+	width: 70%;
 }
 
 .OfferMaker__overview {

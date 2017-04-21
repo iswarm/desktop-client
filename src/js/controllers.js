@@ -37,7 +37,7 @@ myApp.controller("SettingsCtrl", [ '$scope', '$location', 'SettingFactory',
 		SettingFactory.setProxy($scope.proxy);
 		SettingFactory.setStellarUrl($scope.url);
 		SettingFactory.setFedNetwork($scope.fed_network);
-		$location.path('/');
+		$location.path('/balance');
 	};
 } ]);
 

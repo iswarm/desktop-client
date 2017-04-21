@@ -105,7 +105,7 @@ myApp.run(['$rootScope', '$window', '$location', '$translate', 'AuthenticationFa
 	      $rootScope.role = AuthenticationFactory.userRole;
 	      // if the user is already logged in, take him to the home page
 	      if (AuthenticationFactory.isLogged() == true && $location.path() == '/login') {
-	    	  $location.path('/');
+	    	  $location.path('/balance');
 	      }
 	});
 	

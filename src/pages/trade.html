@@ -14,17 +14,13 @@
 				<div class="PairPicker__pair">
 					<div class="AssetPair">
 						<div class="AssetPair__card">
-							<div class="AssetCard AssetCard--fixed">
+							<div class="AssetCard ">
 								<div class="AssetCard__main">
-									<div class="AssetCard__logo">
-										<img class="AssetCard__logo__image" data-ng-src="{{base.logo}}">
-									</div>
 									<div class="AssetCard__content">
 										<div class="AssetCard__header">
 											<span class="AssetCard__code">{{base_code}}</span> 
-											<span class="AssetCard__federation">{{base.name}}</span>
 										</div>
-										<p class="AssetCard__issuerAccountId" title="{{__address}}">{{base_issuer | shortaddress}}</p>
+										
 									</div>
 								</div>
 							</div>
@@ -33,17 +29,13 @@
 							<a href="javascript:" ng-click="flip()"><span class="glyphicon glyphicon-transfer"></span></a>
 						</div>
 						<div class="AssetPair__card">
-							<div class="AssetCard AssetCard--fixed">
+							<div class="AssetCard ">
 								<div class="AssetCard__main">
-									<div class="AssetCard__logo">
-										<img class="AssetCard__logo__image" data-ng-src="{{counter.logo}}">
-									</div>
 									<div class="AssetCard__content">
 										<div class="AssetCard__header">
 											<span class="AssetCard__code">{{counter_code}}</span> 
-											<span class="AssetCard__federation">{{counter.name}}</span>
 										</div>
-										<p class="AssetCard__issuerAccountId" title="{{__address}}">{{counter_issuer | shortaddress}}</p>
+										
 									</div>
 								</div>
 							</div>
@@ -64,8 +56,8 @@
 				<div class="AddTrustFromDirectory">
 					<div class="row" ng-init="native=gateways.getSourceById('')">
 						<div class="row__fixedAsset">
-							<gateway name="{{native.name}}" logo="{{native.logo}}"
-									website="{{native.website}}" code="XLM" address=""></gateway>
+							<gateway 
+									 code="XLM" ></gateway>
 						</div>
 						<div class="row__shareOption">
 							<button class="s-button btn btn-success" ng-click="pick('base', 'XLM', '')" translate="as_base">As Base Asset</button>
@@ -77,8 +69,7 @@
 					<div ng-repeat="(code, sublines) in lines">
 						<div class="row" ng-repeat="(issuer, line) in sublines">
 							<div class="row__fixedAsset" ng-init="gateway=gateways.getSourceById(line.issuer)">
-								<gateway name="{{gateway.name}}" logo="{{gateway.logo}}"
-										website="{{gateway.website}}" code="{{line.code}}" address="{{line.issuer}}"></gateway>
+								<gateway  code="{{line.code}}" ></gateway>
 							</div>
 							<div class="row__shareOption">
 								<button class="s-button btn btn-success" ng-click="pick('base', line.code, line.issuer)" translate="as_base">As Base Asset</button>
@@ -113,7 +104,7 @@
 									</td>
 								</tr>
 								<tr class="OfferMaker__table__row">
-									<td class="OfferMaker__table__label">{{'order_value' | translate}} ({{counter_code}})</td>
+									<td class="OfferMaker__table__label">{{'order_value' | translate}} </td>
 									<td class="OfferMaker__table__input">
 										<input type="text" class="OfferMaker__table__input__input" ng-model="buy_volume" ng-change="calculate('buy_volume')">
 									</td>
@@ -142,15 +133,15 @@
 									</td>
 								</tr>
 								<tr class="OfferMaker__table__row">
-									<td class="OfferMaker__table__label" translate="price_of_each">Price of Each</td>
+									<td class="OfferMaker__table__label" translate="price_of_each">Price of Each </td>
 									<td class="OfferMaker__table__input">
 										<input type="text" class="OfferMaker__table__input__input" ng-model="sell_price" ng-change="calculate('sell_price')">
 									</td>
 								</tr>
 								<tr class="OfferMaker__table__row">
-									<td class="OfferMaker__table__label">{{'order_value' | translate}} ({{counter_code}})</td>
+									<td class="OfferMaker__table__label">{{'order_value' | translate}}  </td>
 									<td class="OfferMaker__table__input">
-										<input type="text" class="OfferMaker__table__input__input" ng-model="sell_volume" ng-change="calculate('sell_volume')">
+									<input type="text" class="OfferMaker__table__input__input" ng-model="sell_volume" ng-change="calculate('sell_volume')">	
 									</td>
 								</tr>
 							</tbody>

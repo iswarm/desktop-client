@@ -5,8 +5,8 @@
 
 // There's currently a code repetition between blobLocal and blobRemote..
 'use strict';
-var fs = require('fs');
-var sjcl = require('sjcl');
+//var fs = require('fs');
+//var sjcl = require('sjcl');
 
 myApp.factory('BlobFactory', ['$rootScope', function ($scope){
   var cryptConfig = {
@@ -50,14 +50,11 @@ myApp.factory('BlobFactory', ['$rootScope', function ($scope){
    * Attempts to retrieve the blob.
    */
   BlobObj.get = function(walletfile, callback){
-    fs.readFile(walletfile, 'utf8', function(err, data){
-      if (err) {
-        callback(err);
-        return;
-      }
-
-      callback(null, data);
-    });
+    var reader = new FileReader();
+  	reader.readAsText(walletfile);
+  	reader.onload = function() {
+  		callback(null, this.result);
+  	}
   };
 
   /**

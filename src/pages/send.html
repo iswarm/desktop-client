@@ -55,7 +55,7 @@
 					<span class="s-inputGroup__item s-inputGroup__item--tag S-flexItem-1of4" translate="recipient">Recipient</span>
 					<input type="text" class="s-inputGroup__item S-flexItem-share" 
 						ng-model="target_address" ng-change="resolve()"
-						placeholder="{{'example' | translate}}: GAREELUB43IRHWEASCFBLKHURCGMHE5IF6XSE7EXDLACYHGRHM43RFOX">
+						placeholder="{{'example' | translate}}: GBXXGZGNA6DQ5U4LKF6FP3QNXIZ4X3OTSRXYRV36N5UPKB5JG6Y3ROCK">
 				</label>
 				<label class="s-inputGroup AddTrust__inputGroup">
 					<span class="s-inputGroup__item s-inputGroup__item--tag S-flexItem-1of4" translate="amount">Amount</span>
@@ -116,7 +116,7 @@
 						</ul>
 					</div>
 					<div class="row__message" style="margin-bottom: 10px;" ng-show="sending">
-						正在发送到 {{real_address | shortaddress}}
+						正在发送到 {{real_address}}
 					</div>
 					
 					<div class="AddTrust__confirmation__assetCard" ng-show="src_code && (!src_issuer || isValidAddress(src_issuer))">
@@ -129,7 +129,7 @@
 									<div class="AssetCard__header">
 										<span class="AssetCard__code">{{src_code}}</span>{{src_name}}
 									</div>
-									<p class="AssetCard__issuerAccountId">{{src_issuer | shortaddress}}</p>
+									<p class="AssetCard__issuerAccountId">{{src_issuer }}</p>
 								</div>
 							</div>
 						</div>
