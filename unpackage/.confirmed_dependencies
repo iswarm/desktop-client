@@ -1,0 +1,43 @@
+{
+	"src/app.html": {
+		"resources": [
+			"src/lib/bootstrap.min.js",
+			"src/css/bootstrap.min.css",
+			"src/css/balance.css",
+			"src/css/app.css",
+			"src/lib/underscore-min.js",
+			"src/css/auth.css",
+			"src/lib/sjcl.js",
+			"src/js/controller/security.js",
+			"src/js/lang/translate_cn.js",
+			"src/pages/header.html",
+			"src/js/stellar/api.factory.js",
+			"src/js/controller/send.js",
+			"src/js/controller/balance.js",
+			"src/lib/angular.min.js",
+			"src/js/filters.js",
+			"src/css/angular-csp.css",
+			"src/pages/footer.html",
+			"src/js/auth/auth.factory.js",
+			"src/js/auth/auth.controller.js",
+			"src/js/gateways.js",
+			"src/lib/jquery.min.js",
+			"src/css/history.css",
+			"src/js/app.js",
+			"src/lib/angular-translate.min.js",
+			"src/js/stellar/history.factory.js",
+			"src/js/auth/blob.factory.js",
+			"src/lib/angular-route.min.js",
+			"src/css/trade.css",
+			"src/js/controllers.js",
+			"src/js/factory.js",
+			"src/js/stellar/orderbook.factory.js",
+			"src/js/controller/trade.js",
+			"src/lib/stellar-sdk.min.js",
+			"src/js/controller/history.js",
+			"src/js/directives.js",
+			"src/js/lang/translate_en.js",
+			"src/js/controller/trust.js"
+		]
+	}
+}
